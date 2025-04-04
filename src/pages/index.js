@@ -37,7 +37,7 @@ export default function Home() {
       </div>
       <div className="flex flex-row gap-4 h-full  justify-between">
         {Object.entries(tasks).map(([key, taskList]) => (
-          <Column title={key} tasksList={taskList} />
+          <Column key={key} title={key} tasksList={taskList} />
         ))}
       </div>
       {openModal ? (
