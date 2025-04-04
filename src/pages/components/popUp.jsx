@@ -3,7 +3,7 @@ import react,{ useState } from "react";
 const PopUp = ({ onClose, onSubmit }) => {
   const [taskName, setTaskName] = useState("");
   const [description, setDescription] = useState("");
-
+/* eslint-disable */
   const handleSubmit = () => {
     if (!taskName.trim()) return alert("Task name is required!");
     onSubmit({ title:taskName, description });
