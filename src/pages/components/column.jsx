@@ -8,7 +8,7 @@ const Column = ({ title, tasksList }) => {
       <h2 className="text-lg font-semibold text-gray-700 mb-3">{title}</h2>
       {/* Tasks List */}
       <div className="space-y-2">
-        {tasksList.map((task) => (
+        {tasksList?.map((task) => (
           <Cards task={task} />
         ))}
       </div>

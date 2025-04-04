@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Column from "./components/column";
 import PopUp from "./components/popUp";
-import { loadTasks, saveTasks } from "./components/storageUtility";
+import loadTasks, {  saveTasks } from "./components/storageUtility";
 
 export default function Home() {
 
@@ -36,7 +36,7 @@ export default function Home() {
         </button>
       </div>
       <div className="flex flex-row gap-4 h-full  justify-between">
-        {Object.entries(tasks).map(([key, taskList]) => (
+        {Object.entries(tasks)?.map(([key, taskList]) => (
           <Column key={key} title={key} tasksList={taskList} />
         ))}
       </div>
